@@ -1,0 +1,430 @@
+@font-face {
+  font-family: "Journal";
+  src: url(Journal-EditedbyAEK.ttf) format("truetype");
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0%;
+    padding: 0%;
+    background-color: rgba(153,155,250,1);
+}
+/* Navigation Area */
+nav{
+    padding: 1%;
+    width: 100%;
+    background-color: #2C0047;
+    position: fixed;
+    z-index: 10000000;
+}
+
+.navbar-placeholder{
+  padding: 3.3%;
+  background-color: red;
+}
+
+.navbar{
+    list-style-type: none;
+    margin-top: 1.5%;
+    padding: 0;
+    overflow: hidden;
+    float: right;
+    margin-right: 2%;
+}
+.logo{
+    width: 15%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+.logo-link{
+  text-decoration: none;
+  
+}
+.navbar li{
+    float:  left;
+    text-decoration: underline;
+}
+.navbuttons{
+    font-family: "Oswald";
+    font-size: 25px;
+    display: block;
+    color: #B5B5A5;
+    font-weight: bold;
+    text-align: center;
+    padding: 0px 16px;
+    text-decoration: none;
+}
+
+.navbuttons-selected{
+  font-family: "Oswald";
+  font-size: 25px;
+  display: block;
+  color: #DCDC30;
+  font-weight: bold;
+  text-align: center;
+  padding: 0px 16px;
+  text-decoration: none;
+}
+.navbuttons:hover{
+    background: linear-gradient(-45deg, #ffff00, #DCDC30, #B5B5A5);
+	background-size: 300%;
+	text-transform: uppercase;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	animation: text-animation 3s ease-in-out infinite;
+	-moz-animation: text-animation 3s ease-in-out infinite;
+	-webkit-animation: text-animation 3s ease-in-out infinite;
+}
+@keyframes text-animation {
+	0% { background-position: 0px 50%; }
+	50% { background-position: 100% 50%; }
+	100% { background-position: 0px 50%; }
+}
+
+
+/* Scroll Area */
+
+
+.scrollbg{
+    padding: 25%;
+    background: rgb(41,42,89);
+    background: -moz-linear-gradient(180deg, rgba(41,42,89,1) 0%, rgba(153,155,250,1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(41,42,89,1) 0%, rgba(153,155,250,1) 100%);
+    background: linear-gradient(180deg, rgba(41,42,89,1) 0%, rgba(153,155,250,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#292a59",endColorstr="#999bfa",GradientType=1);
+    overflow:hidden;
+    position: absolute;
+    width: 50%;
+}
+
+.front-left-mountain, .front-left-mountain-two, .back-left-mountain, .front-right-mountain, .back-right-mountain,.back-right-mountain-two,.back-left-mountain-two, .moon {
+  position: absolute;
+}
+
+.moon{
+  scale: 120%;
+  top: 20px;
+  right: 100px;
+  z-index: 4;
+}
+
+.scrolltext{
+  position: absolute;
+  font-family: "Oswald";
+  color: #d0d1ff;
+  font-weight: bold;
+  font-size: 190px;
+  left: 17%;
+  top: 30%;
+  z-index: 3;
+}
+/* Left Side */
+.front-left-mountain{
+  left: -200px;
+  bottom: -10px;
+  z-index: 4;
+  border-left: 300px solid transparent;
+  border-right: 300px solid transparent;
+  border-bottom: 500px solid #292a59;
+}
+.front-left-mountain-two { 
+  left: 30px;
+  bottom: -200px;
+  z-index: 4;
+  border-left: 350px solid transparent;
+  border-right: 400px solid transparent;
+  border-bottom: 500px solid #292a59;
+}
+.back-left-mountain {
+  left: -200px;
+  bottom: 0px;
+  z-index: 2;
+  border-left: 400px solid transparent;
+  border-right: 400px solid transparent;
+  border-bottom: 550px solid #4d4e81;
+}
+
+.back-left-mountain-two {
+  left: 310px;
+  bottom: 0px;
+  z-index: 1;
+  border-left: 300px solid transparent;
+  border-right: 300px solid transparent;
+  border-bottom: 550px solid #6c6ebe;
+}
+
+/* Right Side */
+.front-right-mountain{
+  right: -250px;
+  bottom: -10px;
+  z-index: 4;
+  border-left: 300px solid transparent;
+  border-right: 300px solid transparent;
+  border-bottom: 500px solid #292a59;
+}
+.back-right-mountain {
+  right: -200px;
+  bottom: 0px;
+  z-index: 3;
+  border-left: 400px solid transparent;
+  border-right: 400px solid transparent;
+  border-bottom: 550px solid #4d4e81;
+}
+.back-right-mountain-two {
+  right: 300px;
+  bottom: 0px;
+  z-index: 0;
+  border-left: 400px solid transparent;
+  border-right: 400px solid transparent;
+  border-bottom: 550px solid #6668ab;
+}
+/* 
+.monster, .monster:before, .monster:after {
+position: absolute;
+  z-index: 2;
+  width: auto;
+  height: 500px;
+} */
+.scrolltext {
+-webkit-animation: monster 5s infinite linear;
+        animation: monster 5s infinite linear;
+}
+@-webkit-keyframes monster {
+  0%   { left: -100px; }
+  100% { left: 2000px; } 
+}
+@keyframes monster {
+ 
+  0%   { left: -100px; }
+  100% { left: 2000px; } 
+}
+
+#scrollkeeper{
+  padding: 25%;
+  background-color: rgba(153,155,250,1);
+}
+
+/* Journal Side */
+#journal{
+  margin: 0;
+  padding: 0;
+  background-color:  rgba(153,155,250,1);
+}
+.journal{
+  padding: 2%;
+  margin: 1%;
+  margin-top: 0%;
+  background-color: rgb(42, 43, 104);
+}
+.journal-header{
+  padding: 0%;
+  margin: 1%;
+  margin-bottom: 0%;
+  background-color: rgb(30, 31, 73);
+}
+.journal-header h1{
+  display: inline;
+  font-size: 100px;
+  font-family: "Oswald";
+  margin-left: 1%;
+  color: #d0d1ff;
+}
+.journal-cards{
+  margin-right: 2%;
+}
+.journal-cards a{
+   text-decoration: none;
+}
+.journal-cards .card-image{
+  width: 250px;
+  height: 350px;
+  border-radius: 3rem;
+  cursor: pointer;
+  box-shadow: black 8px 8px 20px;
+}
+
+/* Creatures Side */
+#creatures{
+  margin: 0;
+  padding: 0;
+  background-color:  rgba(153,155,250,1);
+}
+.creatures{
+  padding: 2%;
+  margin: 1%;
+  margin-top: 0%;
+  background-color: rgb(42, 43, 104);
+}
+.creatures-header{
+  padding: 0%;
+  margin: 1%;
+  margin-bottom: 0%;
+  background-color: rgb(30, 31, 73);
+}
+.creatures-header h1{
+  display: inline;
+  font-size: 100px;
+  font-family: "Oswald";
+  margin-left: 1%;
+  color: #d0d1ff;
+}
+.creatures-cards{
+  margin-right: 2%;
+}
+.creatures-cards a{
+   text-decoration: none;
+}
+.creatures-cards .card-image{
+  width: 250px;
+  height: 350px;
+  border-radius: 3rem;
+  cursor: pointer;
+  box-shadow: black 8px 8px 20px;
+}
+
+
+/* Footer Side */
+
+.footer{
+  background-color: #292a59;
+  width:auto;
+  padding: 1%;
+  margin-bottom: 0%;
+  position: static;
+  bottom: 0px;
+  left: 0px;
+}
+
+.footer-text{
+  text-align: center;
+  color: #d0d1ff;
+  font-size: 20px;
+}
+
+
+
+/* ---------------------Chapter Side------------------- */
+#chapter{
+  margin: 0;
+  padding: 0;
+  background-color:  rgba(153,155,250,1);
+}
+.text-cover{
+  margin-left: 7%;
+  margin-right: 7%;
+}
+.chapter{
+  padding: 2%;
+  margin: 4%;
+  margin-left: 9%;
+  margin-right: 9%;
+  margin-top: 0%;
+  background-color: #f8f5de;
+  background-image: linear-gradient(to right, rgba(255,210,0,0.4), rgba(200, 160, 0, 0.1) 11%, rgba(0,0,0,0) 35%, rgba(200, 160, 0, 0.1) 65%);
+  box-shadow: inset 0 0 75px rgba(255,210,0,0.3), inset 0 0 20px rgba(255,210,0,0.4), inset 0 0 30px rgba(220,120,0,0.8);
+  color: rgba(0,0,0,0.5);
+  letter-spacing: 0.05em;
+  line-height: 1.8;
+  
+  margin-bottom: 10%;
+}
+.chapter h1{
+  font-family: "Times New Roman";
+  font-size: 40px;
+  text-align: center;
+}
+.chapter q{
+  font-family: "Journal";
+  font-size: 35px;
+  letter-spacing:2px;
+}
+
+.chapter p{
+  font-family: "Times New Roman";
+  font-size: 25px;
+}
+.chapter-header{
+  padding: 0%;
+  margin: 4%;
+  margin-left: 9%;
+  margin-right: 9%;
+  margin-bottom: 0%;
+  background-color: rgb(30, 31, 73);
+}
+.chapter-header h1{
+  display: inline;
+  font-size: 100px;
+  font-family: "Oswald";
+  margin-left: 1%;
+  color: #d0d1ff;
+}
+#next-chapter{
+  position: relative;
+  float: right;
+  margin-top: 4%;
+  width: 250px;
+  height: 70px;
+  background-color: #6668ab;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+#prev-chapter{
+  position: relative;
+  float: left;
+  margin-top: 4%;
+  width: 250px;
+  height: 70px;
+  background-color: #6668ab;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+/* ---------------------Creatures Side------------------- */
+#lyras{
+  margin: 0;
+  padding: 0;
+  background-color:  rgba(153,155,250,1);
+}
+.lyras{
+  padding: 2%;
+  margin: 4%;
+  margin-top: 0%;
+  background-color:rgb(42, 43, 104);
+}
+.lyras p{
+  font-family: "Arial";
+  font-size: 36px;
+  color:#d0d1ff;
+}
+.lyras-img{
+  width: 350px;
+  height: 450px;
+  float: right;
+  border-radius: 2rem;
+  box-shadow: black 8px 8px 20px;
+}
+.lyras-header{
+  padding: 0%;
+  margin: 4%;
+  margin-bottom: 0%;
+  background-color: rgb(30, 31, 73);
+}
+.lyras-header h1{
+  display: inline;
+  font-size: 100px;
+  font-family: "Oswald";
+  margin-left: 1%;
+  color: #d0d1ff;
+}
+
+
+
+
+@media only screen and (max-width: 1000px) and (min-width: 200px)  {
+ 
+}
+
+
+
+

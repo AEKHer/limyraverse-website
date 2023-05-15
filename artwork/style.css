@@ -1,0 +1,194 @@
+/* Settings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: rgba(153,155,250,1);
+}
+
+
+nav{
+  left: 0%;
+  top: 0%;
+  padding: 1%;
+  width: 100%;
+  background-color: #2C0047;
+  position: fixed;
+  z-index: 10000000;
+}
+.navbar-placeholder{
+padding: 3.3%;
+background-color: red;
+}
+#notsupported{
+visibility: hidden;
+width: 0;
+height: 0;
+padding: 0;
+margin: 0;
+z-index: -10;
+}
+.navbar{
+  list-style-type: none;
+  margin-top: 1.5%;
+  padding: 0;
+  overflow: hidden;
+  float: right;
+  margin-right: 2%;
+}
+
+.navbuttons-selected{
+  font-family: "Oswald";
+  font-size: 25px;
+  display: block;
+  color: #DCDC30;
+  font-weight: bold;
+  text-align: center;
+  padding: 0px 16px;
+  text-decoration: none;
+}
+.logo{
+  width: 15%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+.navbar li{
+  float:  left;
+  text-decoration: underline;
+}
+.navbuttons{
+  font-family: "Oswald";
+  font-size: 25px;
+  display: block;
+  color: #B5B5A5;
+  font-weight: bold;
+  text-align: center;
+  padding: 0px 16px;
+  text-decoration: none;
+}
+.navbuttons:hover{
+  background: linear-gradient(-45deg, #ffff00, #DCDC30, #B5B5A5);
+background-size: 300%;
+text-transform: uppercase;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+animation: text-animation 3s ease-in-out infinite;
+-moz-animation: text-animation 3s ease-in-out infinite;
+-webkit-animation: text-animation 3s ease-in-out infinite;
+}
+@keyframes text-animation {
+0% { background-position: 0px 50%; }
+50% { background-position: 100% 50%; }
+100% { background-position: 0px 50%; }
+}
+
+
+.l-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 30px;
+  margin-top: 5%;
+}
+@media screen and (max-width: 760px) {
+  .l-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.b-game-card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding-bottom: 150%;
+  perspective: 1000px;
+  transition: transform 0.35s;
+}
+.b-game-card .cover {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  background-size: cover;
+  box-shadow: 0px 0px 8px 1px #000000ad;
+  perspective-origin: 50% 50%;
+  transform-style: preserve-3d;
+  transform-origin: center;
+  will-change: transform;
+  transition: transform 0.5s, filter 0.35s; 
+  border-radius: 3rem;
+  /* Gloss */
+}
+.b-game-card .cover .gloss {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 20em;
+  height: 20em;
+  margin-left: -6em;
+  margin-top: -17em;
+  background: radial-gradient(circle farthest-corner at 50% 50%, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.5) 33%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 100%);
+  opacity: 0;
+  will-change: transform;
+  transition: opacity 0.21s ease-in-out;
+}
+.b-game-card:hover {
+  transform: scale(1.5);
+  z-index: 10;
+  cursor: crosshair;
+}
+.b-game-card:hover .cover {
+  box-shadow: 10px 20px 32px 1px #000000ab;
+  transition: none;
+}
+.b-game-card:hover .cover .gloss {
+  opacity: 0.5;
+}
+
+.artwork-texts{
+  text-align: center;
+  position: absolute;
+  top:20%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.artwork-texts h3{
+  font-size: 36px;
+  color: #2C0047;
+}
+.artwork-texts p{
+  color: #484988;
+  font-size: 25px;
+}
+/* Footer Side */
+
+.footer{
+  position: absolute;
+  background-color: #292a59;
+  left:0;
+  bottom: 0;
+  width:100%;
+  padding: 1%;
+  margin-bottom: 0%;
+}
+
+.footer-text{
+  text-align: center;
+  color: #d0d1ff;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
